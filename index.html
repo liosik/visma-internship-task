@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VISMA TEST APP</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="d-flex space-a mt-30">
+
+	<div class="d-flex column container-left">
+		<div class="pagination d-flex center"></div>
+		<div class="d-flex ">
+			<div class="images"></div>
+		</div>
+
+	</div>
+	<div class="d-flex column center container-right">
+		<h1>Image Will Appear Here</h1>
+	</div>
+</div>
+<div class="filters hidden">
+	<div class="filters">
+		<input id="grayscale" onchange="showBigImage()" type="checkbox"> <b>Black/White</b>
+	</div>
+
+	<div class="filters">
+		0
+		<input id="blur" onchange="showBigImage()" type="range" min="0" max="10" value="0">
+		10
+		<b>Blur</b>
+
+	</div>
+
+</div>
+</body>
+
+</html>
