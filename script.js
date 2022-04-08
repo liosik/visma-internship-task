@@ -4,7 +4,7 @@ const imagesEl = document.querySelector('.images')
 const pagination = document.querySelector('.pagination')
 const grayscaleFilter = document.getElementById('grayscale')
 const blurFilter = document.getElementById('blur')
-const hidden = document.querySelector(".hidden")
+const hidden = document.querySelector('.hidden')
 
 let currentPage = 1
 const limit = 100
@@ -23,7 +23,7 @@ const showBigImage = () => {
     bigImageEl.src = `${currentBigImage.download_url}`
 
     if (grayscaleFilter.checked) {
-        bigImageEl.src += "?grayscale"
+        bigImageEl.src += '?grayscale'
         if (Number(blurFilter.value > 0)) {
             bigImageEl.src += `&blur=${blurFilter.value}`
         }
@@ -35,10 +35,10 @@ const showBigImage = () => {
     bigImageTextEl.innerHTML = `<h1>Author: ${currentBigImage.author}</h1>
     <h2> Original Height: ${currentBigImage.height} </h2>
     <h2>Original Width: ${currentBigImage.width}</h2>`
-    rightContainer.innerHTML = ""
+    rightContainer.innerHTML =''
     rightContainer.appendChild(bigImageEl)
     rightContainer.appendChild(bigImageTextEl)
-    hidden.classList.remove("hidden")
+    hidden.classList.remove('hidden')
 }
 
 grayscaleFilter.onchange = showBigImage
