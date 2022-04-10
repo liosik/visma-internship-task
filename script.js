@@ -57,8 +57,6 @@ const showImages = (images) => {
         }
         smallImageEl.onclick = () => {
             currentBigImage = image
-            blurFilter.value = 0
-            grayscaleFilter.checked = false
             showBigImage()
         }
         smallImageEl.style.backgroundImage = `url(https://picsum.photos/id/${image.id}/200/200)`
